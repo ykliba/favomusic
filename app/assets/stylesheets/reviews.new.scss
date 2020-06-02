@@ -1,0 +1,41 @@
+.contents_new {
+  width: 100%;
+  height: calc(100vh - 200px);
+  background-color: gainsboro;
+  .new_box {
+    .title_form {
+      width: 600px;
+      height: 50px;
+      margin-left: 420px;
+      margin-top: 30px;
+    }
+    .artist_form {
+      width: 600px;
+      height: 50px;
+      margin-left: 420px;
+      margin-top: 30px;
+    }
+    .text_form {
+      width: 600px;
+      height: 200px;
+      margin-left: 420px;
+      margin-top: 30px;
+    }
+    .image_form {
+      width: 600px;
+      height: 50px;
+      margin-left: 420px;
+      margin-top: 30px;
+    }
+    .btn_box {
+      &__btn {
+       margin-left: 620px;
+       width: 200px;
+       height: 30px;
+       margin-top: 30px;
+       background-color: lightgreen;
+      }
+    }
+  }
+  
+}

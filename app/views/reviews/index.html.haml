@@ -1,0 +1,11 @@
+.contents
+  - @reviews.each do |review|
+    .content_post
+      .review_title
+        = review.title
+      .artist_name
+        = review.artist
+      .image
+        = image_tag review.image, size: '250x250'
+      
+    

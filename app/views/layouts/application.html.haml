@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title favomusic
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .header
+      .title
+        = link_to "Favomusic", root_path
+      .search_box
+      .login_box
+        login
+      .post_box
+        .post_box__text
+          = link_to "Post", new_review_path
+
+    .main
+      = yield
+
+    .footer
+      .footer__text
+        COPYRIGHT Favomusic 2020
