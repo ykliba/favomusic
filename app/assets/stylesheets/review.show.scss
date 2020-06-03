@@ -1,0 +1,25 @@
+.show {
+  color: darkslategray;
+  position: absolute;
+  .show_header {
+    margin-left: 30px;
+    margin-top: 20px;
+    &__title {
+      font-weight: bold;
+    }
+    &__artist {
+      font-size: 14px;
+    }
+  }
+  .show_main {
+    display: flex;
+    margin: 10px 30px;
+    height: 300px;
+    &__image {
+      margin-right: 5px;
+    }
+  }
+  .posted {
+    margin-left: 30px;
+  }
+}

@@ -1,3 +1,13 @@
 .show
-  .show_title
-    = @review.title
+  .show_header
+    .show_header__title
+      = @review.title
+    .show_header__artist
+      = @review.artist
+  .show_main
+    .show_main__image
+      = image_tag @review.image, size: '300x300', class: "photo"
+    .show_main__text
+      = @review.text
+  .posted
+    user
