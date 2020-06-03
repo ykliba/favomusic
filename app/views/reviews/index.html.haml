@@ -6,6 +6,7 @@
       .artist_name
         = review.artist
       .image
-        = image_tag review.image, size: '250x250'
+        = image_tag review.image, link_to review_path(review.id), size: '250x250'
+        
       
     

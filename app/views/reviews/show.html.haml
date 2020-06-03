@@ -1,0 +1,12 @@
+.show
+  .content_show
+    .show_title
+      = @review.title
+    .show_artist
+      = @review.artist
+    .show_image
+      = link_to image_tag @review.image, size: '250x250'
+    .show_text
+      = @review.text
+      
+    
