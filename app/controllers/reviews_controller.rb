@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   def index
-    @reviews = Review.all
+    @reviews = Review.all.order("created_at DESC")
   end
 
   def new
@@ -13,6 +13,10 @@ class ReviewsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @review = Review.find(params[:id])
+  end
+  
   private
   def review_params
     params.require(:review).permit(:title, :artist, :text, :image)
