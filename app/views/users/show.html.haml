@@ -1,0 +1,10 @@
+.contents
+  -# %h3 Your post
+  - @reviews.each do |review|
+    .content_post
+      .review_title
+        = review.title
+      .artist_name
+        = review.artist
+      .image
+        = link_to image_tag(src = review.image, size: '250x250'), review_path(review.id)
