@@ -84,12 +84,13 @@ body {
       .content_post {
        width: 250px;
        height: 300px;
-       margin-left: 32px;
-       margin-top: 140px;
+       padding-left: 32px;
+       padding-top: 120px;
       
        .review_title {
          font-weight: bold;
          font-size: 18px;
+         height: 55px;
        }
        .artist_name {
          font-size: 14px;
@@ -98,6 +99,32 @@ body {
          &:hover {
           opacity: 0.5;
          }
+       }
+       .under_box {
+         display: flex;
+         .edit {
+           margin-right: 10px;
+           margin-left: 20px;
+           width: 100px;
+           background-color: lightgreen;
+           text-align: center;
+           &:hover {
+            opacity: 0.5;
+           }
+         }
+         .destroy {
+           width: 100px;
+           background-color: lightgreen;
+           text-align: center;
+           margin-right: 20px;
+           &:hover {
+            opacity: 0.5;
+           }
+         }
+         a {
+          text-decoration: none;
+          color: #333333;
+        }
        }
      }
     }

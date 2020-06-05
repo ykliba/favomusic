@@ -10,9 +10,22 @@ class ReviewsController < ApplicationController
   end
 
   def create 
-    # binding.pry
     Review.create(review_params)
     redirect_to root_path
+  end
+
+  def destroy
+    review = Review.find(params[:id])
+    review.destroy
+  end
+
+  def edit
+    @review = Review.find(params[:id])
+  end
+
+  def update
+    review = Review.find(params[:id])
+    review.update(review_params)
   end
 
   def show
