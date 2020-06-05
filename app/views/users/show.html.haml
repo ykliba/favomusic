@@ -11,3 +11,5 @@
       .under_box
         = link_to "編集", edit_review_path(review.id), class: "edit"
         = link_to "削除", review_path(review.id), class: "destroy", method: :delete
+.paginate
+  = paginate(@reviews)

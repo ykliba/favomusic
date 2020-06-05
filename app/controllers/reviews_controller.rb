@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
   
   def index
-    @reviews = Review.all.order("created_at DESC")
+    @reviews = Review.includes(:user).order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
