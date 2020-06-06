@@ -11,3 +11,19 @@
       = @review.text
   .posted
     = @review.user.nickname
+
+  .show_under
+    .comment_box
+      - if current_user
+        = form_with(model: [@review, @comment], local: true) do |f|
+          = f.text_area :text, placeholder: "Comment", rows: "2", class: "form"
+          = f.submit "SEND", class: "btn"
+      - else
+        .strong
+          %p コメントの投稿には新規登録/ログインが必要です
+    .comment_text
+      - if @comments
+        - @comments.each do |comment|
+          %p
+            = link_to comment.user.nickname, user_path(comment.user_id)
+            = comment.text

@@ -1,8 +1,13 @@
 class Review < ApplicationRecord
-  belongs_to :user
-  has_many :coments
-
   validates :title, :artist, :text, :image, presence: true
-
+  belongs_to :user
+  has_many :comments
   
+  def self.search(search)
+    if search
+      Review.where('text LIKE(?)', "%#{search}%")
+    else
+      Review.all
+    end
+  end
 end

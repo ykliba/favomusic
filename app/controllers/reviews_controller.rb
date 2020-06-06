@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
   
   def index
     @reviews = Review.includes(:user).order("created_at DESC").page(params[:page]).per(5)
@@ -30,6 +30,12 @@ class ReviewsController < ApplicationController
 
   def show
     @review = Review.find(params[:id])
+    @comment = Comment.new
+    @comments = @review.comments.includes(:user).order("created_at DESC")
+  end
+
+  def search
+    @review = Review.search(params[:keyword])
   end
   
   private
