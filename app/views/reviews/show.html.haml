@@ -9,8 +9,9 @@
       = image_tag @review.image, size: '300x300', class: "photo"
     .show_main__text
       = @review.text
-  .posted
-    = @review.user.nickname
+  .posted 
+    Posted by
+    = link_to @review.user.nickname, user_path(@review.user_id)
 
   .show_under
     .comment_box

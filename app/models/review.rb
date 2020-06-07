@@ -5,7 +5,7 @@ class Review < ApplicationRecord
   
   def self.search(search)
     if search
-      Review.where('text LIKE(?)', "%#{search}%")
+      Review.where('artist LIKE(?)', "%#{search}%")
     else
       Review.all
     end

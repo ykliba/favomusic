@@ -35,7 +35,8 @@ class ReviewsController < ApplicationController
   end
 
   def search
-    @review = Review.search(params[:keyword])
+    @reviews = Review.search(params[:keyword])
+    @reviews = @reviews.page(params[:page]).order("created_at DESC").page(params[:page]).per(5)
   end
   
   private
