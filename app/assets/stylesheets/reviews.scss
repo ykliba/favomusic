@@ -84,6 +84,14 @@ body {
         
       }
     }
+    .page_title {
+      width: 250px;
+      text-align: center;
+      margin-left: 32px;
+      padding-top: 40px;
+      font-weight: bold;
+      color: whitesmoke;
+    }
     .contents {
       color: darkslategray;
       width: 1440px;
@@ -93,12 +101,12 @@ body {
        width: 250px;
        height: 376px;
        margin-left: 32px;
-       margin-top: 60px;
+       margin-top: 40px;
        .review_title {
          font-weight: bold;
          font-size: 18px;
          height: 55px;
-         width: 300px;
+         width: 250px;
        }
        .artist_name {
          font-size: 14px;
