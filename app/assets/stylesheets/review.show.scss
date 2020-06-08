@@ -1,0 +1,70 @@
+.show {
+  color: darkslategray;
+  position: absolute;
+  width: 100%;
+  .show_header {
+    margin-left: 55px;
+    margin-top: 20px;
+    &__title {
+      font-weight: bold;
+    }
+    &__artist {
+      font-size: 14px;
+    }
+  }
+  .show_main {
+    display: flex;
+    margin-top: 10px;
+    height: 300px;
+    width: 1330px;
+    margin: 10px auto;
+    
+    &__image {
+      margin-right: 5px;
+    }
+    &__text {
+      width: 1000px;
+      height: 300px;
+      margin-left: 30px;
+      
+    }
+  }
+  .posted {
+    margin-left: 55px;
+  }
+  .show_under {
+    width: 100%;
+    .comment_box {
+      margin: 0 auto;
+      height: 100px;
+      width: 1330px;
+      background-color: whitesmoke;
+      position: relative;
+     .form {
+      width: 1000px;
+      margin-left: 165px;
+      margin-top: 10px;
+     }
+     .btn {
+       width: 300px;
+       margin-left: 510px;
+       background-color: lightgreen;
+       color: whitesmoke;
+     }
+     .strong {
+       text-align: center;
+       padding-top: 20px;
+     }
+    }
+    .comment_text {
+      width: 1330px;
+      height: 100px;
+      background-color: whitesmoke;
+      margin: 0 auto;
+      overflow: auto;
+      p {
+        margin-left: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.page_title
+  = @nickname
+  's posted
+.contents
+  - @reviews.each do |review|
+    .content_post
+      .review_title
+        = review.title
+      .artist_name
+        = review.artist
+      .image
+        = link_to image_tag(src = review.image, size: '250x250'), review_path(review.id)
+      .under_box
+        - if user_signed_in? && current_user.id == review.user_id
+          = link_to "編集", edit_review_path(review.id), class: "edit"
+          = link_to "削除", review_path(review.id), class: "destroy", method: :delete
+.paginate
+  = paginate(@reviews)

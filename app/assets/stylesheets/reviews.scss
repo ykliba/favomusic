@@ -4,42 +4,52 @@ body {
   .header {
     height: 150px;
     width: 100%;
-    background-color: black;
+    background-color: #333333;
     display: flex;
     
     .title {
      line-height: 150px;
      font-size: 50px;
      font-weight: bold;
-     margin-left: 100px;
+     margin-left: 150px;
+     width: 250px;
+     height: 27px;
      a {
        text-decoration: none;
        color: lightgreen;
      }
+     &:hover {
+      opacity: 0.5;
+     }
     }
-    .search_box {
-      background-color: white;
-      width: 300px;
-      height: 30px;
-      margin-top: 60px;
-      margin-left: 175px;
+    .user_box {
+      line-height: 150px;
+      margin: 0 0 0 auto;
+      margin-right: 30px;
+      &__name {
+        a {
+          text-decoration: none;
+          color: lightgreen;
+        }
+        &:hover {
+          opacity: 0.5;
+        }
+      }
     }
     .login_box {
-      margin: 0 0 0 auto;
       line-height: 150px;
-      margin-right: 50px;
-      color: white;
+      margin-right: 30px;
+      a {
+        text-decoration: none;
+        color: white;
+      }
       &:hover {
         opacity: 0.5;
       }
-      
     }
     .post_box {
       margin-top: 60px;
-      margin-right: 170px;
-      height: 30px;
-      width: 60px;
-      border: 1px solid white;
+      margin-right: 200px;
       &:hover {
         opacity: 0.5;
       }
@@ -47,30 +57,56 @@ body {
         line-height: 30px;
         text-align: center;
         color: white;
-        font-weight: bold;
         a {
           text-decoration: none;
           color: white;
         }
       }
-
     }
+    
   }
   .main {
     height: calc(100vh - 200px);
+    width: 1440px;
     background-color: gainsboro;
+    position: relative;
+    .search_box {
+      width: 1440px;
+      height: 60px;
+      .search_input {
+        width: 300px;
+        margin-left: 570px;
+        margin-top: 30px;
+      }
+      .search_btn {
+        background-color: lightgreen;
+        color: whitesmoke;
+        
+      }
+    }
+    .page_title {
+      width: 250px;
+      text-align: center;
+      margin-left: 32px;
+      padding-top: 40px;
+      font-weight: bold;
+      color: whitesmoke;
+    }
     .contents {
       color: darkslategray;
+      width: 1440px;
+      height: 376px;
       display: flex;
       .content_post {
        width: 250px;
-       height: 300px;
+       height: 376px;
        margin-left: 32px;
-       margin-top: 140px;
-      
+       margin-top: 40px;
        .review_title {
          font-weight: bold;
          font-size: 18px;
+         height: 55px;
+         width: 250px;
        }
        .artist_name {
          font-size: 14px;
@@ -80,7 +116,37 @@ body {
           opacity: 0.5;
          }
        }
+       .under_box {
+         display: flex;
+         .edit {
+           margin-right: 10px;
+           margin-left: 20px;
+           width: 100px;
+           background-color: whitesmoke;
+           text-align: center;
+           &:hover {
+            opacity: 0.5;
+           }
+         }
+         .destroy {
+           width: 100px;
+           background-color: whitesmoke;
+           text-align: center;
+           margin-right: 20px;
+           &:hover {
+            opacity: 0.5;
+           }
+         }
+         a {
+          text-decoration: none;
+          color: #333333;
+        }
+       }
      }
+    }
+    .paginate {
+      margin-top: 150px;
+      text-align: center;
     }
   }
   .footer {

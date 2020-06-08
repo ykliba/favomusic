@@ -1,0 +1,36 @@
+.contents_row {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  .container {
+    width: 400px;
+    margin: 0 auto;
+    color: #333333;
+    h2 {
+      font-size: 20px;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-weight: bold;
+    }
+    .new_user {
+      .field {
+        .form {
+          width: 400px;
+          height: 40px;
+          margin-bottom: 40px;
+        }
+      }
+      .actions {
+        .form_btn {
+          width: 100px;
+          margin-left: 150px;
+          background-color: lightgreen;
+          color: whitesmoke;
+          font-weight: bold;
+        }
+      }
+    }
+    
+  }
+}

@@ -1,0 +1,32 @@
+.contents_row
+  .container
+    %h2 Sign up
+    = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
+      = devise_error_messages!
+
+      .field
+        = f.label :nickname
+        %em (8 characters maximum)
+        = f.text_field :nickname, autofocus: true, maxlength: "8", class: "form"
+      
+      .field
+        = f.label :email
+        %br/
+        = f.email_field :email, class: "form"
+      
+      .field
+        = f.label :password
+        - if @validatable
+          %em
+            (#{@minimum_password_length} characters minimum)
+        %br/
+        = f.password_field :password, autocomplete: "off", class: "form"
+      
+      .field
+        = f.label :password_confirmation
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "off", class: "form"
+      
+      .actions
+        = f.submit "Sign up", class: "form_btn"
+    

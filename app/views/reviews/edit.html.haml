@@ -1,0 +1,9 @@
+.contents_new 
+  .new_box
+    = form_with(model: @review, local: true) do |f|
+      = f.text_field :title, placeholder: "title", class: "title_form"
+      = f.text_field :artist, placeholder: "artist", class: "artist_form"
+      = f.text_area :text, placeholder: "text", class: "text_form"
+      = f.text_field :image, placeholder: "image url", class: 'image_form'
+      .btn_box
+        = f.submit "SEND", class: "btn_box__btn"

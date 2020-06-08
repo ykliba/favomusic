@@ -11,13 +11,24 @@
     .header
       .title
         = link_to "Favomusic", root_path
-      .search_box
-      .login_box
-        login
-      .post_box
-        .post_box__text
-          = link_to "Post", new_review_path
+      .user_box
+        - if user_signed_in?
+          .user_box__name
+            = link_to current_user.nickname, user_path(current_user.id)
 
+      .login_box
+        - if user_signed_in?
+          = link_to "log out", destroy_user_session_path, method: :delete
+        - else
+          = link_to "log in", new_user_session_path
+      .post_box
+        - if user_signed_in?
+          .post_box__text
+            = link_to "post", new_review_path
+        - else
+          .post_box__text
+            = link_to "sign up", new_user_registration_path
+      
     .main
       = yield
 
