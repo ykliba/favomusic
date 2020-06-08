@@ -52,4 +52,4 @@ production:
   database: favomusic_production
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /var/lib/mysql/mysql.sock<%= ENV['FAVOMUSIC_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
