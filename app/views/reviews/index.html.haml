@@ -11,9 +11,6 @@
         = review.artist
       .image
         = link_to image_tag(src = review.image, size: '250x250'), review_path(review.id)
-.posted 
-  Posted by
-  = link_to @review.user.nickname, user_path(@review.user.id)
 .paginate
   = paginate(@reviews)
         

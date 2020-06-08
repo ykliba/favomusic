@@ -10,8 +10,12 @@ class ReviewsController < ApplicationController
   end
 
   def create 
-    Review.create(review_params)
-    redirect_to root_path
+    @review = Review.create(review_params)
+    if @review.save
+      redirect_to root_path
+    else
+      redirect_to new_review_path
+    end
   end
 
   def destroy
