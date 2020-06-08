@@ -18,6 +18,7 @@ class ReviewsController < ApplicationController
     end
   end
 
+
   def destroy
     review = Review.find(params[:id])
     review.destroy
@@ -43,6 +44,7 @@ class ReviewsController < ApplicationController
     @reviews = @reviews.page(params[:page]).order("created_at DESC").page(params[:page]).per(5)
   end
   
+
   private
   def review_params
     params.require(:review).permit(:title, :artist, :text, :image).merge(user_id: current_user.id)
