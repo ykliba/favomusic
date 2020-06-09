@@ -78,5 +78,4 @@ gem 'kaminari'
 gem 'fog-aws'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'jquery-rails'
-gem 'font-awesome-sass'
+
