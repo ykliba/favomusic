@@ -6,7 +6,7 @@
       = @review.artist
   .show_main
     .show_main__image
-      = image_tag @review.image, size: '300x300', class: "photo"
+      = image_tag @review.image.url, size: '300x300', class: "photo"
     .show_main__text
       = @review.text
   .posted 
@@ -28,3 +28,4 @@
           %p
             = link_to comment.user.nickname, user_path(comment.user_id)
             = comment.text
+

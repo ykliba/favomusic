@@ -9,7 +9,7 @@
       .artist_name
         = review.artist
       .image
-        = link_to image_tag(src = review.image, size: '250x250'), review_path(review.id)
+        = link_to image_tag(src = review.image.url, size: '250x250'), review_path(review.id)
       .under_box
         - if user_signed_in? && current_user.id == review.user_id
           = link_to "編集", edit_review_path(review.id), class: "edit"

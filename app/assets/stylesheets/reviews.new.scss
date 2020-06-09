@@ -22,10 +22,18 @@
       margin-top: 30px;
     }
     .image_form {
-      width: 600px;
-      height: 50px;
-      margin-left: 420px;
-      margin-top: 30px;
+      .image_upload {
+        width: 50px;
+        background-color: white;
+        margin-left: 420px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color: gray;
+        border: sorid 1px darkgrey;
+      }
+      .form {
+        margin-left: 420px;
+      }
     }
     .btn_box {
       &__btn {
