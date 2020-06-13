@@ -52,7 +52,7 @@ SNSでも同じ事は出来ますが、様々な情報が次から次に押し�
 - has_many :comments
 - belongs_to :user
 
-### reviews_commentsテーブル
+### commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|  |
