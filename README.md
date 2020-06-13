@@ -1,6 +1,7 @@
 # Favomusic
 
 ## おすすめ音楽レビュー投稿アプリ
+![top画像](favomusic.png)
 
 ## 機能
 ### 未ログイン時
