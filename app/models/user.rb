@@ -6,5 +6,5 @@ class User < ApplicationRecord
   has_many :reviews 
   has_many :comments 
 
-  # validates :nickname, presence: true, length: { maximum: 8 }
+  validates :nickname, presence: true, length: { maximum: 8 }
 end
