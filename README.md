@@ -23,7 +23,7 @@
 
 ## 使用技術
 - Ruby on rails,ruby,haml,sass,MySQL,Github
-- EC2上にnginxとunicornを用いてデプロイ
+- AWSのEC2上にnginxとunicornを用いてデプロイ
 - Capistranoを利用した自動デプロイ
 
 ## 制作背景
