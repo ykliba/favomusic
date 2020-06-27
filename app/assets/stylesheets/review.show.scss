@@ -1,10 +1,11 @@
 .show {
   color: darkslategray;
-  position: absolute;
   width: 100%;
+  height: 100%;
+  position: relative;
   .show_header {
     margin-left: 55px;
-    margin-top: 20px;
+    padding-top: 20px;
     &__title {
       font-weight: bold;
     }
@@ -18,7 +19,7 @@
     height: 300px;
     width: 1330px;
     margin: 10px auto;
-    
+    position: relative;
     &__image {
       margin-right: 5px;
     }
@@ -34,31 +35,14 @@
   }
   .show_under {
     width: 100%;
-    .comment_box {
-      margin: 0 auto;
-      height: 100px;
-      width: 1330px;
-      background-color: whitesmoke;
-      position: relative;
-     .form {
-      width: 1000px;
-      margin-left: 165px;
-      margin-top: 10px;
-     }
-     .btn {
-       width: 300px;
-       margin-left: 510px;
-       background-color: lightgreen;
-       color: whitesmoke;
-     }
-     .strong {
-       text-align: center;
-       padding-top: 20px;
-     }
+    position: relative;
+    .comment_btn {
+
     }
+  
     .comment_text {
       width: 1330px;
-      height: 100px;
+      height: 200px;
       background-color: whitesmoke;
       margin: 0 auto;
       overflow: auto;
@@ -66,5 +50,51 @@
         margin-left: 20px;
       }
     }
+  }
+
+  .comment_field {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    .comment_form {
+      
+      width: 800px;
+      height: 300px;
+      background-color: darkgrey;
+      margin: 0 auto;
+      margin-top: 75px;
+      margin-left: 320px;
+      .comment_box {
+        .form {
+          width: 700px;
+          height: 200px;
+          margin-left: 50px;
+          margin-top: 50px;
+          border-radius: 4px;
+        }
+        .btn {
+          width: 100px;
+          margin-left: 350px;
+          background-color: lightgreen;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  .comment_click {
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    background-color: lightgreen;
+    line-height: 30px;
+    margin-bottom: 10px;
+    margin-left: 670px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
   }
 }

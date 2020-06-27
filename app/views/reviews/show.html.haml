@@ -1,9 +1,23 @@
 .show
+
+  .comment_field
+    .comment_form
+      .comment_box
+        - if current_user
+          = form_with(model: [@review, @comment], local: true) do |f|
+            = f.text_area :text, placeholder: "Comment", rows: "2", class: "form"
+            = f.submit "SEND", class: "btn"
+        - else
+          .strong
+            %p コメントの投稿には新規登録/ログインが必要です
   .show_header
     .show_header__title
       = @review.title
     .show_header__artist
       = @review.artist
+
+
+
   .show_main
     .show_main__image
       = image_tag @review.image.url, size: '300x300', class: "photo"
@@ -12,20 +26,17 @@
   .posted 
     Posted by
     = link_to @review.user.nickname, user_path(@review.user_id)
+  
+  .comment_click
+    comment
 
   .show_under
-    .comment_box
-      - if current_user
-        = form_with(model: [@review, @comment], local: true) do |f|
-          = f.text_area :text, placeholder: "Comment", rows: "2", class: "form"
-          = f.submit "SEND", class: "btn"
-      - else
-        .strong
-          %p コメントの投稿には新規登録/ログインが必要です
+    .comment_btn
     .comment_text
       - if @comments
         - @comments.each do |comment|
           %p
             = link_to comment.user.nickname, user_path(comment.user_id)
             = comment.text
-
+  
+ 
