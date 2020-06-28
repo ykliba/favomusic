@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
   $('.comment_click').click(function() {
     $('.comment_field').fadeIn();
   });
