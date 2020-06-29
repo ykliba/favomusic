@@ -23,7 +23,7 @@
 - ページネーション機能
 
 ## 使用技術
-- Ruby on rails,ruby,haml,sass,JQuery,MySQL,Github
+- Ruby on rails,ruby,haml,sass,jQuery,MySQL,GitHub
 - AWSのEC2上にnginxとunicornを用いてデプロイ
 - Capistranoを利用した自動デプロイ
 
