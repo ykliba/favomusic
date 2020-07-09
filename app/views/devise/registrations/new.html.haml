@@ -5,8 +5,8 @@
       = devise_error_messages!
 
       .field
-        = f.label :nickname
-        %em (8 characters maximum)
+        = f.label :ニックネーム
+        %em (最大8文字)
         = f.text_field :nickname, autofocus: true, maxlength: "8", class: "form"
       
       .field
@@ -15,7 +15,7 @@
         = f.email_field :email, class: "form"
       
       .field
-        = f.label :password
+        = f.label :パスワード
         - if @validatable
           %em
             (#{@minimum_password_length} characters minimum)
@@ -23,7 +23,7 @@
         = f.password_field :password, autocomplete: "off", class: "form"
       
       .field
-        = f.label :password_confirmation
+        = f.label :パスワードの確認
         %br/
         = f.password_field :password_confirmation, autocomplete: "off", class: "form"
       
